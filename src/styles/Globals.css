@@ -1,0 +1,255 @@
+html,
+body{
+  padding: 0;
+  margin: 0;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: #3e9dba;
+  overflow: hidden;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+a{
+  text-decoration: none;
+  user-select: none;
+}
+
+button{
+  padding: 0;
+}
+
+a:visited{
+  color: inherit;
+}
+
+.layout{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  height: 100vh;
+  background-color: #3e9dba;
+  color: white;
+  overflow: hidden;
+}
+
+.show_bag_modal{
+    z-index: 2;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    height: 90%;
+    width: 100%;
+    transition: right 0.4s;
+    overflow: hidden;
+}
+
+.close_bag_modal{
+    right: -100%;
+}
+
+.show_product_modal{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 4;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+.close_product_modal{
+  visibility: hidden;
+  opacity: 0;
+  top: -100%;
+}
+
+.link{
+  color: white;
+}
+
+.link:hover{
+  color: red;
+}
+
+.input{
+  appearance: none;
+  background: white;
+}
+
+.button{
+  cursor: pointer;
+  border-radius: 0.2em;
+  user-select: none;
+  border: none;
+}
+
+.primary-button{
+  background-color: #3e9dba;
+  color: white;
+}
+
+.primary-button:hover{
+  background-color: #72bbd1;
+}
+
+.confirm-button{
+  background-color: #2eac67;
+  color: white;
+}
+
+.confirm-button:hover{
+  background-color: #7ecba1;
+}
+
+.danger-button{
+  background-color: #c73737;
+  color: white;
+}
+
+.danger-button:hover{
+  background-color: #df6969;
+}
+
+.card{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: flex-start;
+  border: solid 1px rgb(211, 211, 211);
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.149);
+  background-color: rgba(89, 89, 89, 0.35);
+  border-radius: 2%;
+  transition: border 0.1s ease-in;
+  margin: 2%;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.card:hover{
+    border: solid 1px white;
+  }
+
+.card:hover .card-plus-icon{
+    opacity: 1;
+    right: 7%;
+}
+
+.card-plus-icon{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+    right: -4%;
+    top: 45%;
+    width: 28px;
+    background-color: rgba(255, 255, 255, 0);
+    color: #22c66c;
+    border-radius: 4rem;
+    opacity: 0;
+    transition: all 0.1s ease;
+}
+
+.card-plus-icon:hover{
+    color: #22c66c;
+    background-color: white;
+}
+
+.card-content{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  width: 150px;
+  height: 240px;
+}
+
+.card-description{
+  font-size: 0.8rem;
+  padding: 2% 5%;
+  margin-top: auto;
+  color: rgba(255, 255, 255, 0.603);
+  text-align: center;
+}
+
+.card-price{
+  font-size: 90%;
+  color: rgb(96, 212, 53);
+  font-weight: 1000;
+  margin-top: auto;
+  margin-bottom: 5%;
+  align-self: center;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    width: 100vw;
+    top: 0;
+    z-index: 1;
+    padding: 20px 60px;
+    margin: 0 0 auto 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.navigation_bag_icon{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    padding: 8px 15px;
+    top: 28%;
+    right: 4%;
+    overflow: hidden;
+    transition: all 0.2s ease-in;
+    font-size: 80%;
+    width: 30px;
+    border-radius: 2em;
+    color: white;
+    cursor: pointer;
+}
+
+.navigation_bag_icon_active, .navigation_bag_icon:hover{
+    padding: 8px 120px 8px 0px;
+    background-color: white;
+    width: 7.5%;
+    color: #3e9dba;
+}
+
+.navigation_bag_icon:hover p{
+    opacity: 1;
+    transition: opacity 0.01s ease-in;
+}
+
+.navigation_bag_icon_active p{
+    opacity: 1;
+    transition: opacity 0.05s ease-out;
+}
+
+.navigation_bag_icon svg{
+    color: inherit;
+    width:30px;
+    top: 2%;
+    right: 5%;
+    position: absolute;
+}
+
+.navigation_bag_value{
+    color: #3e9dba;
+    margin: 0;
+    padding: 0px 6px 0 10px;
+    font-size: 0.9rem;
+    transition: opacity 0.1s ease;
+    opacity: 0;
+}
+
+

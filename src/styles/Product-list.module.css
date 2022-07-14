@@ -1,0 +1,8 @@
+.product_list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80vw;
+    height: 15vw;
+    margin-bottom: 42vh;
+}
